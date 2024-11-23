@@ -22,10 +22,19 @@
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeo0T6SqTaxxhRgnIvACzcpiEnN035ua9Qg53HRG_MIEabFuQ/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </section>
     </main>
+    <script src="WebGL Final Build.loader.js"></script>
+    <script>
+        createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: "https://drive.google.com/uc?id=1Z2zzBzVepaxD3KyxFTxLtlPK9PMwxs2l&export=download",
+            frameworkUrl: "WebGL Final Build.framework.js.gz",
+            codeUrl: "WebGL Final Build.wasm.gz",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "DefaultCompany",
+            productName: "Codey Raceway",
+            productVersion: "1.0",
+        }).catch((err) => {
+            alert("Failed to load Unity WebGL Build: " + err);
+        });
+    </script>
 </body>
-<script src="UnityLoader.js"></script>
-<script>
-    const unityContainer = document.getElementById('unity-container');
-    UnityLoader.instantiate(unityContainer, "https://drive.google.com/uc?id=1Z2zzBzVepaxD3KyxFTxLtlPK9PMwxs2l&export=download");
-</script>
 </html>
