@@ -12,29 +12,10 @@
     </header>
 
     <main>
-        <section id="game-container">
-            <h2>Play the Game</h2>
-            <canvas id="unity-canvas" width="960" height="600"></canvas>
-        </section>
-
         <section id="feedback-form">
             <h2>Provide Your Feedback</h2>
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeo0T6SqTaxxhRgnIvACzcpiEnN035ua9Qg53HRG_MIEabFuQ/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </section>
     </main>
-    <script src="WebGL Final Build.loader.js"></script>
-    <script>
-        createUnityInstance(document.querySelector("#unity-canvas"), {
-            dataUrl: "https://darling-griffin-203c3f.netlify.app/WebGL%20Final%20Build.data",
-            frameworkUrl: "WebGL Final Build.framework.js",
-            codeUrl: "WebGL Final Build.wasm",
-            streamingAssetsUrl: "StreamingAssets",
-            companyName: "DefaultCompany",
-            productName: "Codey Raceway",
-            productVersion: "1.0",
-        }).catch((err) => {
-            alert("Failed to load Unity WebGL Build: " + err);
-        });
-    </script>
 </body>
 </html>
